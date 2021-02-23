@@ -70,6 +70,7 @@
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Windows\opencloseWindow1.cs" />
      <Compile Include="Assets\Soja Exiles\Hospital Medical Office Modular\Scripts &amp; Animations\FanRotation.cs" />
+     <Compile Include="Assets\Clock\Scripts\Clock.cs" />
  <Reference Include="Unity.XR.Management">
  <HintPath>D:/College/Final Year Project/VRSimulator/SurgerySimulator/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
  </Reference>
