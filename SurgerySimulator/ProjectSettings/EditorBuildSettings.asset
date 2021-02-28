@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/HeartSurgery.unity
     guid: 4e3d7d13ed3c6974aafb094b9004a205
+  - enabled: 1
+    path: Assets/KidneySurgery.unity
+    guid: f837fcdb8d2b3fa4fb23ec3720ca07c6
+  - enabled: 1
+    path: Assets/LiverSurgery.unity
+    guid: 6b5b0fa603a66c44e916086726ea8213
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8d642a4c1a4ad8843bc4da897b809d3e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 941f5cb8b831fa14dae0f772cb1627bb, type: 2}
