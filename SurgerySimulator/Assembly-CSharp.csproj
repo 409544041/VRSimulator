@@ -56,11 +56,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-     <Compile Include="Assets\Hands.cs" />
+     <Compile Include="Assets\Scripts\Hands.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\First Person Player\MouseLook.cs" />
-     <Compile Include="Assets\Test.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Doors\opencloseDoor.cs" />
-     <Compile Include="Assets\LobbyController.cs" />
+     <Compile Include="Assets\Scripts\LobbyController.cs" />
      <Compile Include="Assets\Clock\Scripts\Clock.cs" />
      <Compile Include="Assets\Soja Exiles\Hospital Medical Office Modular\Scenes\SceneSwitch.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Doors\opencloseDoor1.cs" />
@@ -70,9 +69,12 @@
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Drawer\X Axis\Drawer_Pull_X.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Drawer\Z Axis\Drawer_Pull_Z.cs" />
      <Compile Include="Assets\Soja Exiles\Hospital Medical Office Modular\Scripts &amp; Animations\StretcherOpenClose.cs" />
+     <Compile Include="Assets\Scripts\HeartLobbyController.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\Scripts\KidneyLobbyController.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Windows\opencloseWindow1.cs" />
      <Compile Include="Assets\Soja Exiles\Hospital Medical Office Modular\Scripts &amp; Animations\FanRotation.cs" />
+     <Compile Include="Assets\Scripts\LiverLobbyController.cs" />
  <Reference Include="Unity.XR.Management">
  <HintPath>D:/College/Final Year Project/VRSimulator/SurgerySimulator/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
  </Reference>
