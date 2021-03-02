@@ -73,8 +73,8 @@
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts\KidneyLobbyController.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Windows\opencloseWindow1.cs" />
-     <Compile Include="Assets\Soja Exiles\Hospital Medical Office Modular\Scripts &amp; Animations\FanRotation.cs" />
      <Compile Include="Assets\Scripts\LiverLobbyController.cs" />
+     <Compile Include="Assets\Soja Exiles\Hospital Medical Office Modular\Scripts &amp; Animations\FanRotation.cs" />
  <Reference Include="Unity.XR.Management">
  <HintPath>D:/College/Final Year Project/VRSimulator/SurgerySimulator/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
  </Reference>
