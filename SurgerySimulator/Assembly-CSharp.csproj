@@ -61,6 +61,7 @@
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Doors\opencloseDoor.cs" />
      <Compile Include="Assets\Scripts\LobbyController.cs" />
      <Compile Include="Assets\Clock\Scripts\Clock.cs" />
+     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\Soja Exiles\Hospital Medical Office Modular\Scenes\SceneSwitch.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Doors\opencloseDoor1.cs" />
      <Compile Include="Assets\Soja Exiles\Hospital Medical Office Modular\Scripts &amp; Animations\openclosedouble.cs" />
