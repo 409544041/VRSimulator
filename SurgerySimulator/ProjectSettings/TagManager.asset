@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - SliceLine
+  - RightPeck
+  - RighPeckWithXR
   layers:
   - Default
   - TransparentFX

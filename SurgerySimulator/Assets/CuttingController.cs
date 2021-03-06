@@ -19,6 +19,8 @@ public class CuttingController : MonoBehaviour
         cube.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
     }*/
 
+    
+
 
     void OnTriggerEnter(Collider col)
     {
@@ -31,7 +33,9 @@ public class CuttingController : MonoBehaviour
 
             //transform.GetComponent<hi>().enabled = false; //to disable a specific script
             transform.GetComponent<BoxCollider>().enabled = false;
-            
+            //GameObject.FindWithTag("RightPeck").active = false;
+            //RightPeck.SetActive(false);
+
             //this.enabled = false;
         }
 
