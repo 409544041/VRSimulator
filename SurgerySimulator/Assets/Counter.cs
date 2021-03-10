@@ -6,17 +6,20 @@ public class Counter : MonoBehaviour
 {
 
     public int counterNumber = 0;
-    GameObject right;
-    //public XRGrabInteractable grabInteractable;
+    //GameObject right;
+    
 
     // Start is called before the first frame update
     void Start()
     {
 
         //right = GameObject.FindWithTag("RightPeck");
-        // Hide button
-        GameObject.Find("RightPeck").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f); 
+        // Hide peck with XR until the chest is cut
+        /*GameObject.Find("RightPeck").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f); 
         GameObject.Find("RightPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("LeftPeck").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f);
+        GameObject.Find("LeftPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("Organs").transform.localScale = new Vector3(0, 0, 0);*/
 
         //Rigidbody gameObjectsRigidBody = right.gameObjectsRigidBody.isKinematic = true; // Set the GO's mass to 5 via the Rigidbody.
 
@@ -49,9 +52,15 @@ public class Counter : MonoBehaviour
         {
 
 
-
-            GameObject.Find("RightPeck").transform.localScale = new Vector3(0, 0, 0);
+            //Hide cehst with no XR so yoiu can move the correct one
+            /*GameObject.Find("RightPeck").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("RightPeckWithXR").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f);
+            GameObject.Find("LeftPeck").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("LeftPeckWithXR").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f);
+            GameObject.FindWithTag("CutOutArea").active = false;
+            GameObject.Find("Organs").transform.localScale = new Vector3(999.9996f, 999.9998f, 999.9998f);*/
+
+
 
             //Rigidbody gameObjectsRigidBody = right.AddComponent<Rigidbody>(); // Add the rigidbody.
             //gameObjectsRigidBody.isKinematic = true; // Set the GO's mass to 5 via the Rigidbody.

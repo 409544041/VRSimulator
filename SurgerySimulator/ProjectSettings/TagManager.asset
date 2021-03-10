@@ -7,6 +7,8 @@ TagManager:
   - SliceLine
   - RightPeck
   - RighPeckWithXR
+  - CutOutArea
+  - Organs
   layers:
   - Default
   - TransparentFX
