@@ -19,7 +19,7 @@ public class CuttingController : MonoBehaviour
         cube.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
     }*/
 
-    
+
 
 
     void OnTriggerEnter(Collider col)
@@ -28,7 +28,7 @@ public class CuttingController : MonoBehaviour
         {
             transform.GetComponent<Renderer>().material = cutLineMaterial;
             counterScript.counterNumber += 1;
-            
+
 
 
             //transform.GetComponent<hi>().enabled = false; //to disable a specific script
@@ -40,14 +40,14 @@ public class CuttingController : MonoBehaviour
         }
 
         //Debug.Log("Hello");
-        
+
 
     }
 
 
-    
+
     void Update()
     {
-        
+
     }
 }
