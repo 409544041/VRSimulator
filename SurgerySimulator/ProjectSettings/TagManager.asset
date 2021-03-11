@@ -9,6 +9,8 @@ TagManager:
   - RighPeckWithXR
   - CutOutArea
   - Organs
+  - SliceVeinsTag
+  - CutOutChest
   layers:
   - Default
   - TransparentFX

@@ -27,7 +27,7 @@ public class CuttingController : MonoBehaviour
         if (col.gameObject.tag == "SliceLine")
         {
             transform.GetComponent<Renderer>().material = cutLineMaterial;
-            counterScript.counterNumber += 1;
+            counterScript.chestcutter += 1;
 
 
 
@@ -38,6 +38,23 @@ public class CuttingController : MonoBehaviour
 
             //this.enabled = false;
         }
+        /*else
+        {
+            if (col.gameObject.tag == "SliceVeinsTag")
+            {
+                transform.GetComponent<Renderer>().material = cutLineMaterial;
+                counterScript.counterNumber += 1;
+
+
+
+                //transform.GetComponent<hi>().enabled = false; //to disable a specific script
+                transform.GetComponent<BoxCollider>().enabled = false;
+                //GameObject.FindWithTag("RightPeck").active = false;
+                //RightPeck.SetActive(false);
+
+                //this.enabled = false;
+            }
+        }*/
 
         //Debug.Log("Hello");
 

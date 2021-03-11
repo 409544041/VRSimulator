@@ -5,8 +5,9 @@ using UnityEngine;
 public class Counter : MonoBehaviour
 {
 
-    public int counterNumber = 0;
-    //GameObject right;
+    public int chestcutter = 0;
+    GameObject scalpel;
+    GameObject heart;
     
 
     // Start is called before the first frame update
@@ -15,11 +16,11 @@ public class Counter : MonoBehaviour
 
         //right = GameObject.FindWithTag("RightPeck");
         // Hide peck with XR until the chest is cut
-        /*GameObject.Find("RightPeck").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f); 
+        GameObject.Find("RightPeck").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f); 
         GameObject.Find("RightPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("LeftPeck").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f);
         GameObject.Find("LeftPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
-        GameObject.Find("Organs").transform.localScale = new Vector3(0, 0, 0);*/
+        GameObject.Find("Organs").transform.localScale = new Vector3(0, 0, 0);
 
         //Rigidbody gameObjectsRigidBody = right.gameObjectsRigidBody.isKinematic = true; // Set the GO's mass to 5 via the Rigidbody.
 
@@ -48,17 +49,21 @@ public class Counter : MonoBehaviour
 
     void DeactivatePrefabs()
     {
-        if (counterNumber == 5)
+        if (chestcutter == 5)
         {
+
+            //scalpel = GameObject.FindWithTag("SliceLine"); //chnage the scalpels tag to allow for counting for further cutting.
+            //scalpel.transform.gameObject.tag = "SliceVeinsTag";
 
 
             //Hide cehst with no XR so yoiu can move the correct one
-            /*GameObject.Find("RightPeck").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("RightPeck").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("RightPeckWithXR").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f);
             GameObject.Find("LeftPeck").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("LeftPeckWithXR").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f);
-            GameObject.FindWithTag("CutOutArea").active = false;
-            GameObject.Find("Organs").transform.localScale = new Vector3(999.9996f, 999.9998f, 999.9998f);*/
+            GameObject.FindWithTag("CutOutChest").active = false;
+            GameObject.Find("Organs").transform.localScale = new Vector3(999.9996f, 999.9998f, 999.9998f);
+            GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = true; //this needed otherwise it wouldnt spawn
 
 
 
@@ -79,7 +84,7 @@ public class Counter : MonoBehaviour
 
 
             //gameObjectsRigidBody.mass = 5; // Set the GO's mass to 5 via the Rigidbody.
-            counterNumber = 0;
+            chestcutter = 0;
 
         }
         
