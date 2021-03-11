@@ -11,6 +11,7 @@ TagManager:
   - Organs
   - SliceVeinsTag
   - CutOutChest
+  - CutHeartVeins
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,8 @@ public class Counter : MonoBehaviour
 {
 
     public int chestcutter = 0;
+    public int heartcutter = 0;
+
     GameObject scalpel;
     GameObject heart;
     
@@ -21,6 +23,7 @@ public class Counter : MonoBehaviour
         GameObject.Find("LeftPeck").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f);
         GameObject.Find("LeftPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("Organs").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("CutHeartVeins").transform.localScale = new Vector3(0, 0, 0);
 
         //Rigidbody gameObjectsRigidBody = right.gameObjectsRigidBody.isKinematic = true; // Set the GO's mass to 5 via the Rigidbody.
 
@@ -37,23 +40,24 @@ public class Counter : MonoBehaviour
     void Update()
     {
 
-        
 
-      
 
-        DeactivatePrefabs();
+
+
+        CutChestOut();
+        CutHeartOut();
 
 
 
     }
 
-    void DeactivatePrefabs()
+    void CutChestOut()
     {
         if (chestcutter == 5)
         {
 
-            //scalpel = GameObject.FindWithTag("SliceLine"); //chnage the scalpels tag to allow for counting for further cutting.
-            //scalpel.transform.gameObject.tag = "SliceVeinsTag";
+            scalpel = GameObject.FindWithTag("SliceLine"); //chnage the scalpels tag to allow for counting for further cutting.
+            scalpel.transform.gameObject.tag = "SliceVeinsTag";
 
 
             //Hide cehst with no XR so yoiu can move the correct one
@@ -64,6 +68,7 @@ public class Counter : MonoBehaviour
             GameObject.FindWithTag("CutOutChest").active = false;
             GameObject.Find("Organs").transform.localScale = new Vector3(999.9996f, 999.9998f, 999.9998f);
             GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = true; //this needed otherwise it wouldnt spawn
+            GameObject.Find("CutHeartVeins").transform.localScale = new Vector3(1, 1, 1); // show where to cut heart veins
 
 
 
@@ -88,5 +93,25 @@ public class Counter : MonoBehaviour
 
         }
         
+    }
+
+    void CutHeartOut()
+    {
+        if (heartcutter == 5)
+        {
+
+
+            GameObject.FindWithTag("CutHeartVeins").active = false;
+            //scalpel = GameObject.FindWithTag("SliceLine"); //chnage the scalpels tag to allow for counting for further cutting.
+            //scalpel.transform.gameObject.tag = "SliceVeinsTag";
+
+
+
+
+
+            
+            heartcutter = 0;
+
+        }
     }
 }
