@@ -9,13 +9,13 @@ public class Counter : MonoBehaviour
     public int heartcutter = 0;
 
     GameObject scalpel;
-    GameObject heart;
+    //GameObject heart;
     
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
         //right = GameObject.FindWithTag("RightPeck");
         // Hide peck with XR until the chest is cut
         GameObject.Find("RightPeck").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f); 
@@ -24,7 +24,8 @@ public class Counter : MonoBehaviour
         GameObject.Find("LeftPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("Organs").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("CutHeartVeins").transform.localScale = new Vector3(0, 0, 0);
-
+        GameObject.Find("HeartWithXR").transform.localPosition = new Vector3(0, 0, 0);
+        
         //Rigidbody gameObjectsRigidBody = right.gameObjectsRigidBody.isKinematic = true; // Set the GO's mass to 5 via the Rigidbody.
 
 
@@ -69,6 +70,8 @@ public class Counter : MonoBehaviour
             GameObject.Find("Organs").transform.localScale = new Vector3(999.9996f, 999.9998f, 999.9998f);
             GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = true; //this needed otherwise it wouldnt spawn
             GameObject.Find("CutHeartVeins").transform.localScale = new Vector3(1, 1, 1); // show where to cut heart veins
+            
+
 
 
 
@@ -104,12 +107,20 @@ public class Counter : MonoBehaviour
             GameObject.FindWithTag("CutHeartVeins").active = false;
             //scalpel = GameObject.FindWithTag("SliceLine"); //chnage the scalpels tag to allow for counting for further cutting.
             //scalpel.transform.gameObject.tag = "SliceVeinsTag";
+            
 
-
-
-
+            GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = false;
+            GameObject.Find("Heart").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("HeartWithXR").transform.localPosition = new Vector3(-1.472001f, 3.51f, 2.1214f);
+            GameObject.Find("HeartWithXR").transform.GetComponent<Animator>().enabled = true; //this needed otherwise it wouldnt spawn
 
             
+
+
+
+
+
+
             heartcutter = 0;
 
         }

@@ -12,6 +12,7 @@ TagManager:
   - SliceVeinsTag
   - CutOutChest
   - CutHeartVeins
+  - HeartGameObject
   layers:
   - Default
   - TransparentFX
