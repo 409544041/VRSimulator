@@ -10,10 +10,8 @@ public class CuttingControllerForHeart : MonoBehaviour
    
     void OnTriggerEnter(Collider col2)
     {
-        Debug.Log("Hello");
         if (col2.gameObject.tag == "SliceVeinsTag")
         {
-            Debug.Log("Hello again");
             transform.GetComponent<Renderer>().material = cutLineMaterial;
             counterScript.heartcutter += 1;
             transform.GetComponent<BoxCollider>().enabled = false;

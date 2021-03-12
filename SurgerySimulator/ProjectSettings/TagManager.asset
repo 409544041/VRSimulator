@@ -13,6 +13,9 @@ TagManager:
   - CutOutChest
   - CutHeartVeins
   - HeartGameObject
+  - HeartTrigger
+  - Hands
+  - HeartCube
   layers:
   - Default
   - TransparentFX

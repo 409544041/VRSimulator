@@ -22,10 +22,17 @@ public class Counter : MonoBehaviour
         GameObject.Find("RightPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("LeftPeck").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f);
         GameObject.Find("LeftPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
-        GameObject.Find("Organs").transform.localScale = new Vector3(0, 0, 0);
+        //GameObject.Find("Organs").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("CutHeartVeins").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("HeartWithXR").transform.localPosition = new Vector3(0, 0, 0);
-        
+
+        GameObject.Find("Heart2").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("HeartNew").transform.GetComponent<HeartSpawn>().enabled = false; //to only allow the cube spawner work after the veins are cut
+
+
+
+
+
         //Rigidbody gameObjectsRigidBody = right.gameObjectsRigidBody.isKinematic = true; // Set the GO's mass to 5 via the Rigidbody.
 
 
@@ -67,7 +74,7 @@ public class Counter : MonoBehaviour
             GameObject.Find("LeftPeck").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("LeftPeckWithXR").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f);
             GameObject.FindWithTag("CutOutChest").active = false;
-            GameObject.Find("Organs").transform.localScale = new Vector3(999.9996f, 999.9998f, 999.9998f);
+            //GameObject.Find("Organs").transform.localScale = new Vector3(999.9996f, 999.9998f, 999.9998f);
             GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = true; //this needed otherwise it wouldnt spawn
             GameObject.Find("CutHeartVeins").transform.localScale = new Vector3(1, 1, 1); // show where to cut heart veins
             
@@ -114,7 +121,11 @@ public class Counter : MonoBehaviour
             GameObject.Find("HeartWithXR").transform.localPosition = new Vector3(-1.472001f, 3.51f, 2.1214f);
             GameObject.Find("HeartWithXR").transform.GetComponent<Animator>().enabled = true; //this needed otherwise it wouldnt spawn
 
-            
+
+
+            GameObject.Find("HeartNew").transform.GetComponent<HeartSpawn>().enabled = true;
+
+
 
 
 
