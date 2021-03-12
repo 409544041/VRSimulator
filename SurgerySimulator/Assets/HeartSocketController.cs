@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeartSocketController : MonoBehaviour
 {
-    public Material cutLineMaterial;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,9 @@ public class HeartSocketController : MonoBehaviour
             GameObject.Find("HeartNew").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("Heart2").transform.localScale = new Vector3(0.4000004f, 0.4000004f, 0.4000004f);
             GameObject.Find("Heart2").transform.GetComponent<Animator>().enabled = true;
+
+            GameObject.Find("StitchUpAreaHeart").transform.localScale = new Vector3(1, 1, 1); // stitches appear after heart was placed in
+
 
 
             //Debug.Log("Hello from the heart");

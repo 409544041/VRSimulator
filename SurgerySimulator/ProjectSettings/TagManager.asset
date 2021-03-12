@@ -16,6 +16,8 @@ TagManager:
   - HeartTrigger
   - Hands
   - HeartCube
+  - Needle
+  - StitchUpHeartArea
   layers:
   - Default
   - TransparentFX

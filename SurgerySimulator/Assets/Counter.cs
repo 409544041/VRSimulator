@@ -7,6 +7,7 @@ public class Counter : MonoBehaviour
 
     public int chestcutter = 0;
     public int heartcutter = 0;
+    public int stichescounter = 0;
 
     GameObject scalpel;
     //GameObject heart;
@@ -24,10 +25,17 @@ public class Counter : MonoBehaviour
         GameObject.Find("LeftPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
         //GameObject.Find("Organs").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("CutHeartVeins").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("StitchUpAreaHeart").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("HeartWithXR").transform.localPosition = new Vector3(0, 0, 0);
 
         GameObject.Find("Heart2").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("HeartNew").transform.GetComponent<HeartSpawn>().enabled = false; //to only allow the cube spawner work after the veins are cut
+
+        GameObject.Find("RightPeck2").transform.localScale = new Vector3(0, 0, 0);
+
+
+
+
 
 
 
@@ -54,6 +62,7 @@ public class Counter : MonoBehaviour
 
         CutChestOut();
         CutHeartOut();
+        StitchHeart();
 
 
 
@@ -135,5 +144,47 @@ public class Counter : MonoBehaviour
             heartcutter = 0;
 
         }
+    }
+
+    void StitchHeart()
+    {
+        if (stichescounter == 5)
+        {
+            GameObject.FindWithTag("StitchUpHeartArea").active = false;
+
+            GameObject cube1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            cube1.transform.localScale = new Vector3(0.03f, 0.005f, 0.03f);
+            cube1.transform.localPosition = new Vector3(0.5065f, 1.2367f, -3.0067f);
+            cube1.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
+            cube1.GetComponent<BoxCollider>().isTrigger = true;
+            cube1.gameObject.AddComponent<ChestSocketController>().enabled = true;
+
+            /*GameObject cube2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            cube2.transform.localScale = new Vector3(0.03f, 0.005f, 0.03f);
+            cube2.transform.localPosition = new Vector3(0.5065f, 1.2367f, -3.1332f);
+            cube2.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
+            cube2.GetComponent<BoxCollider>().isTrigger = true;
+            cube2.gameObject.AddComponent<ChestSocketController>().enabled = true;*/
+
+
+            //cube.gameObject.tag = "HeartCube";
+            //cube.GetComponent<BoxCollider>().isTrigger = true;
+            //cube.gameObject.AddComponent<HeartSocketController>().enabled = true;
+
+
+
+
+
+
+
+
+
+
+
+            stichescounter = 0;
+
+        }
+
+
     }
 }
