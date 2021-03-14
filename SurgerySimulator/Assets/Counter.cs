@@ -32,6 +32,7 @@ public class Counter : MonoBehaviour
         GameObject.Find("HeartNew").transform.GetComponent<HeartSpawn>().enabled = false; //to only allow the cube spawner work after the veins are cut
 
         GameObject.Find("RightPeck2").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("LeftPeck2").transform.localScale = new Vector3(0, 0, 0);
 
 
 
@@ -155,16 +156,19 @@ public class Counter : MonoBehaviour
             GameObject cube1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
             cube1.transform.localScale = new Vector3(0.03f, 0.005f, 0.03f);
             cube1.transform.localPosition = new Vector3(0.5065f, 1.2367f, -3.0067f);
-            cube1.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
+            cube1.GetComponent<Renderer>().material.color = new Color(255, 255, 255);   
+            cube1.gameObject.tag = "ChestCubeLeft";
             cube1.GetComponent<BoxCollider>().isTrigger = true;
-            cube1.gameObject.AddComponent<ChestSocketController>().enabled = true;
+            cube1.gameObject.AddComponent<ChestSocketControllerLeft>().enabled = true;
 
-            /*GameObject cube2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            GameObject cube2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
             cube2.transform.localScale = new Vector3(0.03f, 0.005f, 0.03f);
             cube2.transform.localPosition = new Vector3(0.5065f, 1.2367f, -3.1332f);
             cube2.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
+            cube2.gameObject.tag = "ChestCubeRight";
+
             cube2.GetComponent<BoxCollider>().isTrigger = true;
-            cube2.gameObject.AddComponent<ChestSocketController>().enabled = true;*/
+            cube2.gameObject.AddComponent<ChestSocketControllerRight>().enabled = true;
 
 
             //cube.gameObject.tag = "HeartCube";
