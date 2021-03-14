@@ -1,44 +1,57 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class ChestSocketControllerRight : MonoBehaviour
 {
 
     // Start is called before the first frame update
+    
+
+    public Counter counterScript;
+    //GameObject countingScript;
+
     void Start()
     {
 
+        //countingScript = GameObject.Find("CounterGameObject");
+
+
+        //counterScript.AddComponent<countingScript>();
+
+
+        //GameObject gem = GameObject.Find("CounterGameObject");
+        //counterScript script = gem.AddComponent<counterScript>();
+        //the script variable is now the factoryScript you added in the line above.
+        //script.someParameter = someValue;
+
+        //cube2.gameObject.AddComponent<ChestSocketControllerRight>().enabled = true;
+
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter(Collider col2)
     {
-        if (col.gameObject.tag == "RighPeckWithXR")
+        if (col2.gameObject.tag == "RighPeckWithXR")
         {
 
-            //GameObject.Find("Testing").transform.localPosition = new Vector3(0.6089f, 1.1754f, -3.0669f);
             GameObject.Find("RightPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("RightPeck2").transform.localScale = new Vector3(0.001f, 0.0011363f, 0.001f);
             GameObject.FindWithTag("ChestCubeRight").transform.localScale = new Vector3(0, 0, 0);
 
-
-
-
-
-
-            //Debug.Log("Hello from the heart");
-            //transform.GetComponent<Renderer>().material = cutLineMaterial;
-            //counterScript.heartcutter += 1;
-            //transform.GetComponent<BoxCollider>().enabled = false;
+            counterScript.rightpeck += 1;
         }
-        
-        
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
 
     }
+
+
+
+    
+
+    
 }
