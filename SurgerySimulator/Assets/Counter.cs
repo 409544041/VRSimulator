@@ -37,6 +37,11 @@ public class Counter : MonoBehaviour
         GameObject.Find("ChestCubeLeft").transform.localPosition = new Vector3(0, 0, 0);
         GameObject.Find("ChestCubeRight").transform.localPosition = new Vector3(0, 0, 0);
 
+        GameObject.Find("Blood1").transform.GetComponent<Animator>().enabled = false; //this needed otherwise it wouldnt spawn
+        GameObject.Find("Blood2").transform.GetComponent<Animator>().enabled = false; //this needed otherwise it wouldnt spawn
+        GameObject.Find("Blood1").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("Blood2").transform.localScale = new Vector3(0, 0, 0);
+
 
 
     }
