@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
 
     private Animator myanimation;
+    public Counter counterScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +22,9 @@ public class Health : MonoBehaviour
             GameObject.Find("Blood1").transform.localScale = new Vector3(0.0008744821f, 0.002815551f, 0.002412532f);
             GameObject.Find("Blood2").transform.localScale = new Vector3(0.0008744819f, 0.002815552f, 0.002412532f);
 
+            counterScript.damageTaken += 1; //send damage poitns to counter script
+
         }
-
-
-
     }
 
     void OnTriggerExit(Collider col)
@@ -36,7 +36,6 @@ public class Health : MonoBehaviour
             GameObject.Find("Blood1").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("Blood2").transform.localScale = new Vector3(0, 0, 0);
         }
-
     }
 
 

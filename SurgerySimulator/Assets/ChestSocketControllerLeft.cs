@@ -14,9 +14,7 @@ public class ChestSocketControllerLeft : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col)
-    {
-        
-
+    {  
         if (col.gameObject.tag == "LeftPeckWithXR")
         {
             GameObject.Find("LeftPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
@@ -24,7 +22,6 @@ public class ChestSocketControllerLeft : MonoBehaviour
             GameObject.FindWithTag("ChestCubeLeft").transform.localScale = new Vector3(0, 0, 0);
 
             counterScript.leftpeck += 1;
-
         }
     }
 

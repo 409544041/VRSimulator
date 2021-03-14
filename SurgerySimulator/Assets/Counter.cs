@@ -10,6 +10,14 @@ public class Counter : MonoBehaviour
     public int stichescounter = 0;
     public int leftpeck = 0;
     public int rightpeck = 0;
+    public int damageTaken = 0;
+
+    
+    public int lastX = 0;
+
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HeartBar healthBar;
 
     GameObject scalpel;
     //GameObject heart;
@@ -18,6 +26,7 @@ public class Counter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lastX = damageTaken;
 
         GameObject.Find("RightPeck").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f);
         GameObject.Find("RightPeckWithXR").transform.localScale = new Vector3(0, 0, 0);
@@ -42,6 +51,9 @@ public class Counter : MonoBehaviour
         GameObject.Find("Blood1").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("Blood2").transform.localScale = new Vector3(0, 0, 0);
 
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+
 
 
     }
@@ -56,7 +68,22 @@ public class Counter : MonoBehaviour
         StitchHeart();
         Chest();
 
+        if (damageTaken > lastX)
+        {   
+            TakeDamage(10);
+            lastX = damageTaken;
+        }
+        else
+        {            
+            lastX = damageTaken;
+        }
+
+        
+        
+
     }
+
+    
 
     void CutChestOut()
     {
@@ -76,6 +103,10 @@ public class Counter : MonoBehaviour
             //GameObject.Find("Organs").transform.localScale = new Vector3(999.9996f, 999.9998f, 999.9998f);
             GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = true; //this needed otherwise it wouldnt spawn
             GameObject.Find("CutHeartVeins").transform.localScale = new Vector3(1, 1, 1); // show where to cut heart veins
+
+            GameObject.Find("CutOutChestTooDeep").active = false; //once the chest is cut the the too deep area will disappear
+
+
 
             chestcutter = 0;
 
@@ -149,6 +180,25 @@ public class Counter : MonoBehaviour
 
     }
 
+    /*void TakeDamage()
+    {
+        currentHealth -= damageTaken;
+
+        healthBar.SetHealth(currentHealth);
+    }*/
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
+
+        if (currentHealth ==0)
+        {
+            Debug.Log("Game Over");
+
+        }
+    }
 
 
 }
