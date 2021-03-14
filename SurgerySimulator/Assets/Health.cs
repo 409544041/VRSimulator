@@ -21,11 +21,6 @@ public class Health : MonoBehaviour
             GameObject.Find("Blood1").transform.localScale = new Vector3(0.0008744821f, 0.002815551f, 0.002412532f);
             GameObject.Find("Blood2").transform.localScale = new Vector3(0.0008744819f, 0.002815552f, 0.002412532f);
 
-
-
-            //Debug.Log("wrong palce");
-
-
         }
 
 
@@ -40,15 +35,7 @@ public class Health : MonoBehaviour
             GameObject.Find("Blood2").transform.GetComponent<Animator>().enabled = false; ; //this needed otherwise it wouldnt spawn
             GameObject.Find("Blood1").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("Blood2").transform.localScale = new Vector3(0, 0, 0);
-
-
-
-            //Debug.Log("wrong palce");
-
-
         }
-
-
 
     }
 
