@@ -50,9 +50,12 @@ public class Counter : MonoBehaviour
         GameObject.Find("Blood2").transform.GetComponent<Animator>().enabled = false; //this needed otherwise it wouldnt spawn
         GameObject.Find("Blood1").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("Blood2").transform.localScale = new Vector3(0, 0, 0);
+        
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        GameObject.Find("GameOverText").transform.localScale = new Vector3(0, 0, 0);
 
 
 
@@ -174,18 +177,9 @@ public class Counter : MonoBehaviour
 
             //Debug.Log("chest is in place");
         }
-
-
-
-
     }
 
-    /*void TakeDamage()
-    {
-        currentHealth -= damageTaken;
-
-        healthBar.SetHealth(currentHealth);
-    }*/
+    
 
     void TakeDamage(int damage)
     {
@@ -195,7 +189,9 @@ public class Counter : MonoBehaviour
 
         if (currentHealth ==0)
         {
-            Debug.Log("Game Over");
+            GameObject.Find("GameOverText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            GameObject.Find("Tools").transform.localScale = new Vector3(0, 0, 0); //get rid off the tools
+
 
         }
     }

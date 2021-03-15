@@ -22,6 +22,7 @@ TagManager:
   - LeftPeckWithXR
   - ChestCubeLeft
   - ChestCubeRight
+  - Test
   layers:
   - Default
   - TransparentFX
