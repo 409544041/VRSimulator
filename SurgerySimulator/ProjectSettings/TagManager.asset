@@ -23,6 +23,8 @@ TagManager:
   - ChestCubeLeft
   - ChestCubeRight
   - Test
+  - Picker
+  - Syringe
   layers:
   - Default
   - TransparentFX

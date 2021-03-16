@@ -215,8 +215,8 @@ MonoBehaviour:
   m_AnchorControlOffAxisDeadzone: 0.3
   m_ControllerNode: 4
   m_SelectUsage: 3
-  m_ActivateUsage: 2
-  m_UIPressUsage: 2
+  m_ActivateUsage: 3
+  m_UIPressUsage: 3
   m_AxisToPressThreshold: 0.1
   m_RotateAnchorLeft: 16
   m_RotateAnchorRight: 17
@@ -1470,7 +1470,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.5905e-41, y: -1.1427025e-33, z: 4.5905e-41, w: 9.403955e-38}
+  m_BoundingSphereOverride: {x: 0, y: -2.8648376, z: 7.51e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1972,8 +1972,8 @@ MonoBehaviour:
   m_AnchorControlOffAxisDeadzone: 0.3
   m_ControllerNode: 5
   m_SelectUsage: 3
-  m_ActivateUsage: 2
-  m_UIPressUsage: 2
+  m_ActivateUsage: 3
+  m_UIPressUsage: 3
   m_AxisToPressThreshold: 0.1
   m_RotateAnchorLeft: 16
   m_RotateAnchorRight: 17

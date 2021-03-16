@@ -51,6 +51,8 @@ public class TimerController : MonoBehaviour
             textField.text = "GameOver";
             GameObject.Find("HeartRate").transform.localScale = new Vector3(0, 0, 0);
 
+            GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("StartGameText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("CutHeartOutText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("ReplaceHeartsText").transform.localScale = new Vector3(0, 0, 0);

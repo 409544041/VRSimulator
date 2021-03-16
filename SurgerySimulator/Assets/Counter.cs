@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Counter : MonoBehaviour
 {
+    
 
     public int chestcutter = 0;
     public int heartcutter = 0;
@@ -22,6 +23,8 @@ public class Counter : MonoBehaviour
 
     public Text textField;
 
+    
+
     GameObject scalpel;
     //GameObject heart;
 
@@ -29,7 +32,11 @@ public class Counter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
         lastX = damageTaken;
+
+        
 
         GameObject.Find("CutHeartOutText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("ReplaceHeartsText").transform.localScale = new Vector3(0, 0, 0);
@@ -57,8 +64,18 @@ public class Counter : MonoBehaviour
         GameObject.Find("Blood1").transform.GetComponent<Animator>().enabled = false;
         GameObject.Find("Blood2").transform.GetComponent<Animator>().enabled = false;
         GameObject.Find("Blood1").transform.localScale = new Vector3(0, 0, 0);
-        GameObject.Find("Blood2").transform.localScale = new Vector3(0, 0, 0);
-        
+        GameObject.Find("Blood2").transform.localScale = new Vector3(0, 0, 0); 
+        GameObject.Find("Blood3").transform.GetComponent<Animator>().enabled = false;       
+        GameObject.Find("Blood3").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("Blood4").transform.GetComponent<Animator>().enabled = false;
+        GameObject.Find("Blood4").transform.localScale = new Vector3(0, 0, 0);
+
+        GameObject.Find("Blood5").transform.GetComponent<Animator>().enabled = false;
+        GameObject.Find("Blood5").transform.localScale = new Vector3(0, 0, 0);
+
+        GameObject.Find("Blood6").transform.GetComponent<Animator>().enabled = false;
+        GameObject.Find("Blood6").transform.localScale = new Vector3(0, 0, 0);
+
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -70,14 +87,22 @@ public class Counter : MonoBehaviour
         GameObject.Find("GameCompleted").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("MainMenuSuccesful").transform.localPosition = new Vector3(0, 0, 0);
         GameObject.Find("ResetLevelSuccesful").transform.localPosition = new Vector3(0, 0, 0);
+        GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0, 0, 0);
 
-        ;
+        
+
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        
+
+
         CutChestOut();
         CutHeartOut();
         StitchHeart();
@@ -92,6 +117,9 @@ public class Counter : MonoBehaviour
         {            
             lastX = damageTaken;
         }  
+
+
+        
     }
     
 
@@ -164,6 +192,9 @@ public class Counter : MonoBehaviour
             GameObject.Find("MainMenuSuccesful").transform.localPosition = new Vector3(0.774f, 1.53f, -3.091f);
             GameObject.Find("ResetLevelSuccesful").transform.localPosition = new Vector3(0.775f, 1.53f, -2.703f);
 
+            GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0, 0, 0);
+
             //write well done and stop time
             GameObject.Find("Timer").transform.GetComponent<TimerController>().enabled = false; //this needed otherwise it wouldnt spawn
             textField.fontSize = 20;
@@ -177,8 +208,23 @@ public class Counter : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
 
-        if (currentHealth ==0)
+        if (currentHealth == 40 )
         {
+            GameObject.Find("LowHealthText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            GameObject.Find("PanicAudio").GetComponent<AudioSource>().mute = false;
+        }
+        else if(currentHealth == 20)
+        {
+            GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            GameObject.Find("PanicAudio").GetComponent<AudioSource>().mute = true;
+            GameObject.Find("PanicAudio2").GetComponent<AudioSource>().mute = false;
+
+        }
+        else if(currentHealth == 0)
+        {
+            GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("StartGameText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("CutHeartOutText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("ReplaceHeartsText").transform.localScale = new Vector3(0, 0, 0);
@@ -187,6 +233,16 @@ public class Counter : MonoBehaviour
 
             GameObject.Find("HeartRate").transform.localScale = new Vector3(0, 0, 0);
 
+            GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = false;
+
+
+
+            //GameObject.Find("AudioSource").transform.GetComponent<Animator>().enabled = false;
+            GameObject.Find("AudioSource").GetComponent<AudioSource>().mute = true;
+            GameObject.Find("PanicAudio").GetComponent<AudioSource>().mute = true;
+            GameObject.Find("PanicAudio2").GetComponent<AudioSource>().mute = true;
+            GameObject.Find("DeadAudio").GetComponent<AudioSource>().mute = false;
+            //cube.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
 
 
 

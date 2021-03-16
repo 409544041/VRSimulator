@@ -22,7 +22,7 @@ public class GameOverHeartRestart : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Test")
+        if (col.gameObject.tag == "Picker")
         {
             SceneManager.LoadScene(HeartSurgery);
         }
