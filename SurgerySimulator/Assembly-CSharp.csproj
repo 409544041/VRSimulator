@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\Hands.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\First Person Player\MouseLook.cs" />
+     <Compile Include="Assets\GameOverHeartRestart.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Doors\opencloseDoor.cs" />
      <Compile Include="Assets\Scripts\LobbyController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
@@ -120,7 +121,8 @@
      <Compile Include="Assets\Soja Exiles\Hospital Medical Office Modular\Scripts &amp; Animations\FanRotation.cs" />
      <Compile Include="Assets\CuttingControllerForHeart.cs" />
      <Compile Include="Assets\Counter.cs" />
-     <Compile Include="Assets\GameOverHeartRestart.cs" />
+     <Compile Include="Assets\TimerController.cs" />
+     <Compile Include="Assets\GameOverBackToMainMenu.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

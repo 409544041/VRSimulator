@@ -56,6 +56,16 @@ public class Counter : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         GameObject.Find("GameOverText").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("ResetLevel").transform.localPosition = new Vector3(0, 0, 0);
+        GameObject.Find("MainMenu").transform.localPosition = new Vector3(0, 0, 0);
+        
+
+        GameObject.Find("GameCompleted").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("MainMenuSuccesful").transform.localPosition = new Vector3(0, 0, 0);
+        GameObject.Find("ResetLevelSuccesful").transform.localPosition = new Vector3(0, 0, 0);
+
+
+
 
 
 
@@ -172,10 +182,12 @@ public class Counter : MonoBehaviour
 
     void Chest()
     {
-        if(rightpeck == 1 && leftpeck == 1)
+        if(rightpeck == 1 && leftpeck == 1) //game completed
         {
 
-            //Debug.Log("chest is in place");
+            GameObject.Find("GameCompleted").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            GameObject.Find("MainMenuSuccesful").transform.localPosition = new Vector3(0.774f, 1.53f, -3.091f);
+            GameObject.Find("ResetLevelSuccesful").transform.localPosition = new Vector3(0.775f, 1.53f, -2.703f);
         }
     }
 
@@ -191,6 +203,8 @@ public class Counter : MonoBehaviour
         {
             GameObject.Find("GameOverText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
             GameObject.Find("Tools").transform.localScale = new Vector3(0, 0, 0); //get rid off the tools
+            GameObject.Find("ResetLevel").transform.localPosition = new Vector3(0.775f, 1.53f, -2.703f);
+            GameObject.Find("MainMenu").transform.localPosition = new Vector3(00.775f, 1.53f, -3.0937f);
 
 
         }
