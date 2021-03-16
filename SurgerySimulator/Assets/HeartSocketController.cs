@@ -15,6 +15,8 @@ public class HeartSocketController : MonoBehaviour
     {
         if (col.gameObject.tag == "HeartTrigger")
         {
+            GameObject.Find("ReplaceHeartsText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("StichNewHearText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
 
             //GameObject.Find("Testing").transform.localPosition = new Vector3(0.6089f, 1.1754f, -3.0669f);
             GameObject.Find("HeartNew").transform.localScale = new Vector3(0, 0, 0);

@@ -49,6 +49,14 @@ public class TimerController : MonoBehaviour
         {
             textField.fontSize = 20;
             textField.text = "GameOver";
+            GameObject.Find("HeartRate").transform.localScale = new Vector3(0, 0, 0);
+
+            GameObject.Find("StartGameText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("CutHeartOutText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("ReplaceHeartsText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("StichNewHearText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("PutBackChestText").transform.localScale = new Vector3(0, 0, 0);
+
             GameObject.Find("GameOverText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
             GameObject.Find("Tools").transform.localScale = new Vector3(0, 0, 0); //get rid off the tools
             GameObject.Find("ResetLevel").transform.localPosition = new Vector3(0.775f, 1.53f, -2.703f);
