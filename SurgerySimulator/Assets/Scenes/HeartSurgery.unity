@@ -966,9 +966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose: {fileID: 36256466}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &36256466
 Animator:
   serializedVersion: 3
@@ -1708,9 +1705,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 62480624}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &62480624
 Animator:
   serializedVersion: 3
@@ -2222,9 +2216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose: {fileID: 67031322}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &67031322
 Animator:
   serializedVersion: 3
@@ -2890,9 +2881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 89738048}
-  open: 0
-  Player: {fileID: 0}
 --- !u!1001 &93634311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3356,9 +3344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5e0617227fa4743be84f23d9e5cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose1: {fileID: 122924912}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &122924912
 Animator:
   serializedVersion: 3
@@ -4064,9 +4049,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 136829036}
-  open: 0
-  Player: {fileID: 0}
 --- !u!1 &149191603
 GameObject:
   m_ObjectHideFlags: 0
@@ -6270,9 +6252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5e0617227fa4743be84f23d9e5cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose1: {fileID: 206707895}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &206707897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7331,9 +7310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose: {fileID: 250494923}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &250494923
 Animator:
   serializedVersion: 3
@@ -8056,9 +8032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5e0617227fa4743be84f23d9e5cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose1: {fileID: 266871790}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &266871790
 Animator:
   serializedVersion: 3
@@ -8270,9 +8243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5e0617227fa4743be84f23d9e5cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose1: {fileID: 271231940}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &271231940
 Animator:
   serializedVersion: 3
@@ -13165,9 +13135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 488932620}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &488932620
 Animator:
   serializedVersion: 3
@@ -13635,9 +13602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5e0617227fa4743be84f23d9e5cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose1: {fileID: 507700396}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &507700396
 Animator:
   serializedVersion: 3
@@ -16114,9 +16078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 587471084}
-  open: 0
-  Player: {fileID: 0}
 --- !u!1001 &590752649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19381,9 +19342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 741268521}
-  open: 0
-  Player: {fileID: 0}
 --- !u!1 &744593006
 GameObject:
   m_ObjectHideFlags: 0
@@ -25758,9 +25716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5e0617227fa4743be84f23d9e5cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose1: {fileID: 955679188}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &955679188
 Animator:
   serializedVersion: 3
@@ -26475,9 +26430,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 969633511}
-  open: 0
-  Player: {fileID: 0}
 --- !u!1 &989845401
 GameObject:
   m_ObjectHideFlags: 0
@@ -29302,9 +29254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 1125006087}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &1125006089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30018,9 +29967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose: {fileID: 1136690390}
-  open: 0
-  Player: {fileID: 0}
 --- !u!23 &1136690392
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30735,9 +30681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose: {fileID: 1165956457}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &1165956457
 Animator:
   serializedVersion: 3
@@ -33848,9 +33791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 1326702656}
-  open: 0
-  Player: {fileID: 0}
 --- !u!1 &1329597375
 GameObject:
   m_ObjectHideFlags: 0
@@ -34725,9 +34665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 1370387556}
-  open: 0
-  Player: {fileID: 0}
 --- !u!1001 &1374693499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36427,9 +36364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 1450069955}
-  open: 0
-  Player: {fileID: 0}
 --- !u!1 &1467987781
 GameObject:
   m_ObjectHideFlags: 0
@@ -41225,9 +41159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 1699019716}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &1699019716
 Animator:
   serializedVersion: 3
@@ -45101,9 +45032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286620fa050ddc24d90bd777daaa73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pull: {fileID: 1842080086}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &1842080088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45635,9 +45563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5e0617227fa4743be84f23d9e5cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose1: {fileID: 1857909003}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &1857909005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47151,7 +47076,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -1, y: 8, z: 9, w: -10}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -49766,9 +49691,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose: {fileID: 2047062181}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &2047062181
 Animator:
   serializedVersion: 3
@@ -50433,9 +50355,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5e0617227fa4743be84f23d9e5cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose1: {fileID: 2076285774}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &2076285774
 Animator:
   serializedVersion: 3
@@ -51354,9 +51273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5e0617227fa4743be84f23d9e5cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose1: {fileID: 2098260412}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &2098260412
 Animator:
   serializedVersion: 3
@@ -58450,7 +58366,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d943e0be6e95da4197c1ca552b14225, type: 2}
+  - {fileID: 2100000, guid: 217b64a80d4b74f438152b740153e946, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
