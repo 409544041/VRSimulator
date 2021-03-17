@@ -6,9 +6,7 @@ using UnityEngine.UI;
 public class TimerController : MonoBehaviour
 {
     private float startTime;
-
     private string textTime;
-
     private float guiTime;
 
     private int minutes;
@@ -19,11 +17,7 @@ public class TimerController : MonoBehaviour
 
     public int randomCheck = 0;
     public int extraTime = 0;
-
-
-
-
-
+    int var = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +28,6 @@ public class TimerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         Timer();
     }
 
@@ -48,24 +40,22 @@ public class TimerController : MonoBehaviour
         fraction = (int)(guiTime * 100) % 100;
         textTime = string.Format("{0:00}:{1:00}", minutes, seconds, fraction);
         //text.time is what is displayed
+        textField.text = textTime;        
 
-        textField.text = textTime;
-        
-
-        if (seconds >= 3) //after 3 minutes game over /*minutes >= 1 &&*/ 
+        if (minutes >= 0 && seconds >= 25) //start seizure /*minutes >= 1 &&*/ 
         {
+            if(var == 0)
+            {
+                GameObject.Find("Patient").transform.GetComponent<Animator>().enabled = true; //patient having a seizure
+                GameObject.Find("SeizureText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+                GameObject.Find("AllTexts").transform.localScale = new Vector3(0, 0, 0);
+                GameObject.Find("AdrenalineSphere").transform.localPosition = new Vector3(0.4925f, 1.0089f, -3.4352f);
+                GameObject.Find("Injection").transform.localScale = new Vector3(1, 1, 1);
+            }
+            var += 1; // to make sure seizure happens once
+        }        
 
-            GameObject.Find("Patient").transform.GetComponent<Animator>().enabled = true; //patient having a seizure
-            GameObject.Find("SeizureText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-            GameObject.Find("AllTexts").transform.localScale = new Vector3(0, 0, 0);            
-            GameObject.Find("AdrenalineSphere").transform.localPosition = new Vector3(0.5952f, 1.1752f, -3.0727f);         
-        }
-        else
-        {
-            textField.text = textTime;
-        }
-
-        if (seconds >= 10)
+        if (minutes >= 0 && seconds >= 30) // check if adrenaline given
         {
             if (randomCheck == 0)
             {
@@ -74,53 +64,49 @@ public class TimerController : MonoBehaviour
                 GameObject.Find("SeizureText").transform.localScale = new Vector3(0, 0, 0);
                 GameObject.Find("AdrenalineSphere").transform.localPosition = new Vector3(0, 0, 0);
                 GameObject.Find("AllTexts").transform.localScale = new Vector3(1, 1, 1);
+                GameObject.Find("Injection").transform.localScale = new Vector3(0, 0, 0);
             }
             else
             {
                 GameObject.Find("Patient").transform.GetComponent<Animator>().enabled = false;
                 GameObject.Find("SeizureText").transform.localScale = new Vector3(0, 0, 0);                
                 GameObject.Find("AllTexts").transform.localScale = new Vector3(1, 1, 1);
+                GameObject.Find("Injection").transform.localScale = new Vector3(0, 0, 0);
             }
         }
 
-        if(seconds >= 25)//time up with no extra time
-        {
-            
+        if(minutes >= 1 && seconds >= 5)//time up with no extra time
+        {            
             if(extraTime == 0)
             {
                 GameOver();
                 GameObject.Find("SeizureText").transform.localScale = new Vector3(0, 0, 0);
-
-            }
-
-            
+            }            
         }
 
-        if (seconds >= 35)//time up with extra time
+        if (minutes >= 1 && seconds >= 10)//time up with extra time +20s
         {
-
             if (extraTime == 1 )
             {
                 GameObject.Find("ExtraTimeText").transform.localScale = new Vector3(0, 0, 0);
                 GameOver();
                 GameObject.Find("SeizureText").transform.localScale = new Vector3(0, 0, 0);
-
             }
         }
+        else
+        {
+            textField.text = textTime;
+        }
 
-    }
-
-    
+    }    
 
     void GameOver()
     {
         textField.fontSize = 20;
         textField.text = "GameOver";
-        GameObject.Find("HeartRate").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("HeartRate").transform.localScale = new Vector3(0, 0, 0);        
 
-        
-
-        //deactivate script not to allow extra 10 seconds to appear
+        //deactivate script not to allow extra 20 seconds to appear
         GameObject.Find("HeartWithXR").transform.GetComponent<HeartGravity>().enabled = false;
 
         GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);

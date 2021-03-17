@@ -59,6 +59,7 @@
      <Compile Include="Assets\HeartSocketController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+     <Compile Include="Assets\BonusTime.cs" />
      <Compile Include="Assets\Scripts\Hands.cs" />
      <Compile Include="Assets\GameOverHeartRestart.cs" />
      <Compile Include="Assets\GameOverBackToMainMenu.cs" />
@@ -73,6 +74,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\HealthTooDeep.cs" />
+     <Compile Include="Assets\HeartGravity.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
      <Compile Include="Assets\Seizure.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -113,8 +115,7 @@
      <Compile Include="Assets\ChestSocketControllerLeft.cs" />
      <Compile Include="Assets\CuttingControllerForHeart.cs" />
      <Compile Include="Assets\Counter.cs" />
-     <Compile Include="Assets\HeartGravity.cs" />
-     <Compile Include="Assets\BonusTime.cs" />
+     <Compile Include="Assets\DeleteExtraTime.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

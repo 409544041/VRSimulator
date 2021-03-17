@@ -95,6 +95,7 @@ public class Counter : MonoBehaviour
         GameObject.Find("ExtraTimeText").transform.localScale = new Vector3(0, 0, 0);
 
         GameObject.Find("AdrenalineSphere").transform.localPosition = new Vector3(0, 0, 0);
+        GameObject.Find("Injection").transform.localScale = new Vector3(0, 0, 0);
 
 
 
@@ -205,6 +206,10 @@ public class Counter : MonoBehaviour
             GameObject.Find("Timer").transform.GetComponent<TimerController>().enabled = false; //this needed otherwise it wouldnt spawn
             textField.fontSize = 20;
             textField.text = "Completed";
+
+            GameObject.Find("PanicAudio").GetComponent<AudioSource>().mute = true;
+            GameObject.Find("PanicAudio2").GetComponent<AudioSource>().mute = true;
+            GameObject.Find("Tools").transform.localScale = new Vector3(0, 0, 0); //get rid off the tools
         }
     }
 
