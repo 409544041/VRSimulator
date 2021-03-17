@@ -25,6 +25,7 @@ TagManager:
   - Test
   - Picker
   - Syringe
+  - HeartWithXR
   layers:
   - Default
   - TransparentFX

@@ -18,8 +18,10 @@ public class TimerController : MonoBehaviour
     public Text textField;
 
     public int randomCheck = 0;
+    public int extraTime = 0;
 
-    
+
+
 
 
 
@@ -48,6 +50,7 @@ public class TimerController : MonoBehaviour
         //text.time is what is displayed
 
         textField.text = textTime;
+        
 
         if (seconds >= 3) //after 3 minutes game over /*minutes >= 1 &&*/ 
         {
@@ -62,7 +65,7 @@ public class TimerController : MonoBehaviour
             textField.text = textTime;
         }
 
-        if (seconds >= 15)
+        if (seconds >= 10)
         {
             if (randomCheck == 0)
             {
@@ -80,12 +83,31 @@ public class TimerController : MonoBehaviour
             }
         }
 
-        if(seconds >= 45)
+        if(seconds >= 25)//time up with no extra time
         {
-            GameOver();
-            GameObject.Find("SeizureText").transform.localScale = new Vector3(0, 0, 0);
+            
+            if(extraTime == 0)
+            {
+                GameOver();
+                GameObject.Find("SeizureText").transform.localScale = new Vector3(0, 0, 0);
+
+            }
+
+            
         }
-        
+
+        if (seconds >= 35)//time up with extra time
+        {
+
+            if (extraTime == 1 )
+            {
+                GameObject.Find("ExtraTimeText").transform.localScale = new Vector3(0, 0, 0);
+                GameOver();
+                GameObject.Find("SeizureText").transform.localScale = new Vector3(0, 0, 0);
+
+            }
+        }
+
     }
 
     
@@ -95,6 +117,11 @@ public class TimerController : MonoBehaviour
         textField.fontSize = 20;
         textField.text = "GameOver";
         GameObject.Find("HeartRate").transform.localScale = new Vector3(0, 0, 0);
+
+        
+
+        //deactivate script not to allow extra 10 seconds to appear
+        GameObject.Find("HeartWithXR").transform.GetComponent<HeartGravity>().enabled = false;
 
         GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0, 0, 0);
@@ -109,6 +136,17 @@ public class TimerController : MonoBehaviour
         GameObject.Find("ResetLevel").transform.localPosition = new Vector3(0.775f, 1.53f, -2.703f);
         GameObject.Find("MainMenu").transform.localPosition = new Vector3(00.775f, 1.53f, -3.0937f);
 
+        GameObject.Find("ThrowHeartText").transform.localScale = new Vector3(0, 0, 0);
+
+        //to prevent continuation of the level
+        GameObject.Find("ChestCubeRight").transform.localPosition = new Vector3(0, 0, 0);
+        GameObject.Find("ChestCubeLeft").transform.localPosition = new Vector3(0, 0, 0);
+        GameObject.FindWithTag("HeartCube").transform.localPosition = new Vector3(0, 0, 0);
+        GameObject.Find("ExtraTimeCube").transform.localPosition = new Vector3(0, 0, 0);
+        GameObject.Find("HeartNew").transform.localPosition = new Vector3(0, 0, 0);
+        GameObject.Find("CutoutArea").transform.localPosition = new Vector3(0, 0, 0);
+
+        //Audio
         GameObject.Find("AudioSource").GetComponent<AudioSource>().mute = true;
         GameObject.Find("PanicAudio").GetComponent<AudioSource>().mute = true;
         GameObject.Find("PanicAudio2").GetComponent<AudioSource>().mute = true;

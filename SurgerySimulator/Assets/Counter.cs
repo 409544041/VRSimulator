@@ -91,6 +91,8 @@ public class Counter : MonoBehaviour
         GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("SeizureText").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("ThrowHeartText").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("ExtraTimeText").transform.localScale = new Vector3(0, 0, 0);
 
         GameObject.Find("AdrenalineSphere").transform.localPosition = new Vector3(0, 0, 0);
 
@@ -198,7 +200,7 @@ public class Counter : MonoBehaviour
 
             GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0, 0, 0);
-
+            GameObject.Find("ExtraTimeText").transform.localScale = new Vector3(0, 0, 0);
             //write well done and stop time
             GameObject.Find("Timer").transform.GetComponent<TimerController>().enabled = false; //this needed otherwise it wouldnt spawn
             textField.fontSize = 20;
@@ -252,9 +254,12 @@ public class Counter : MonoBehaviour
 
 
             GameObject.Find("GameOverText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            GameObject.Find("ExtraTimeText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("Tools").transform.localScale = new Vector3(0, 0, 0); //get rid off the tools
             GameObject.Find("ResetLevel").transform.localPosition = new Vector3(0.775f, 1.53f, -2.703f);
             GameObject.Find("MainMenu").transform.localPosition = new Vector3(00.775f, 1.53f, -3.0937f);
+
+            GameObject.Find("AllTexts").transform.localScale = new Vector3(0, 0, 0);
 
             //write gameover and stop time
             GameObject.Find("Timer").transform.GetComponent<TimerController>().enabled = false; //this needed otherwise it wouldnt spawn
