@@ -74,6 +74,7 @@ public class Counter : MonoBehaviour
         GameObject.Find("Blood6").transform.GetComponent<Animator>().enabled = false;
         GameObject.Find("Blood6").transform.localScale = new Vector3(0, 0, 0);
 
+        GameObject.Find("SyringeAnimation").transform.GetComponent<Animator>().enabled = false;
 
         GameObject.Find("Patient").transform.GetComponent<Animator>().enabled = false;
 

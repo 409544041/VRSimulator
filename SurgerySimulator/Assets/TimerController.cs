@@ -75,8 +75,7 @@ public class TimerController : MonoBehaviour
             else
             {
                 GameObject.Find("Patient").transform.GetComponent<Animator>().enabled = false;
-                GameObject.Find("SeizureText").transform.localScale = new Vector3(0, 0, 0);
-                GameObject.Find("AdrenalineSphere").transform.localPosition = new Vector3(0, 0, 0);
+                GameObject.Find("SeizureText").transform.localScale = new Vector3(0, 0, 0);                
                 GameObject.Find("AllTexts").transform.localScale = new Vector3(1, 1, 1);
             }
         }
