@@ -35,9 +35,9 @@ public class Counter : MonoBehaviour
         
 
         lastX = damageTaken;
-
-
         
+
+
         GameObject.Find("CutHeartOutText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("ReplaceHeartsText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("StichNewHearText").transform.localScale = new Vector3(0, 0, 0);
@@ -210,6 +210,13 @@ public class Counter : MonoBehaviour
             GameObject.Find("PanicAudio").GetComponent<AudioSource>().mute = true;
             GameObject.Find("PanicAudio2").GetComponent<AudioSource>().mute = true;
             GameObject.Find("Tools").transform.localScale = new Vector3(0, 0, 0); //get rid off the tools
+
+            GameObject.Find("DoneAudio").GetComponent<AudioSource>().mute = false;            
+            GameObject.Find("DoneAudio").GetComponent<AudioSource>().loop = false;
+            rightpeck = 0;
+            leftpeck = 0;
+
+
         }
     }
 
@@ -222,7 +229,7 @@ public class Counter : MonoBehaviour
         if (currentHealth == 40 )
         {
             GameObject.Find("LowHealthText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-            GameObject.Find("PanicAudio").GetComponent<AudioSource>().mute = false;
+            GameObject.Find("PanicAudio").GetComponent<AudioSource>().mute = false;            
         }
         else if(currentHealth == 20)
         {
