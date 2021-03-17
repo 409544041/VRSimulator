@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//trigger to stitch the heart back in
+
 public class StitchingHeart : MonoBehaviour
 {
     public Material cutLineMaterial;
-
-    public Counter counterScript;
-    
-
-
-
+    public Counter counterScript;  
 
     void OnTriggerEnter(Collider col)
     {
@@ -18,25 +15,7 @@ public class StitchingHeart : MonoBehaviour
         {
             transform.GetComponent<Renderer>().material = cutLineMaterial;
             counterScript.stichescounter += 1;
-
-
-
-            //transform.GetComponent<hi>().enabled = false; //to disable a specific script
             transform.GetComponent<BoxCollider>().enabled = false;
-            //GameObject.FindWithTag("RightPeck").active = false;
-            //RightPeck.SetActive(false);
-
-            //this.enabled = false;
         }
-
-
-
-    }
-
-
-
-    void Update()
-    {
-
     }
 }

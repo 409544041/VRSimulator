@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//collider attached to big cube to detect if the heart fell on the ground
+
 public class DeleteExtraTime : MonoBehaviour
 {
     void OnTriggerEnter(Collider col)

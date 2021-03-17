@@ -21367,6 +21367,7 @@ GameObject:
   - component: {fileID: 831476835}
   - component: {fileID: 831476843}
   - component: {fileID: 831476844}
+  - component: {fileID: 831476845}
   m_Layer: 0
   m_Name: HeartNew
   m_TagString: HeartTrigger
@@ -21600,6 +21601,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aef66fd1ac48df44b40f2209f309295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterScript: {fileID: 1797832524}
+--- !u!114 &831476845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831476834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016abf64e0a892b4cad4ddb4f6641291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   counterScript: {fileID: 1797832524}
@@ -35323,6 +35337,7 @@ GameObject:
   - component: {fileID: 1437582906}
   - component: {fileID: 1437582910}
   - component: {fileID: 1437582911}
+  - component: {fileID: 1437582912}
   m_Layer: 0
   m_Name: Heart2
   m_TagString: Untagged
@@ -35450,6 +35465,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aef66fd1ac48df44b40f2209f309295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterScript: {fileID: 1797832524}
+--- !u!114 &1437582912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437582904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016abf64e0a892b4cad4ddb4f6641291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   counterScript: {fileID: 1797832524}
@@ -41310,6 +41338,7 @@ GameObject:
   - component: {fileID: 1722998292}
   - component: {fileID: 1722998293}
   - component: {fileID: 1722998294}
+  - component: {fileID: 1722998296}
   m_Layer: 0
   m_Name: HeartWithXR
   m_TagString: HeartWithXR
@@ -41558,6 +41587,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.24572876, y: 0.3409282, z: 0.2286378}
   m_Center: {x: -0.0024503318, y: 0.049492337, z: -0.017958619}
+--- !u!114 &1722998296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722998284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016abf64e0a892b4cad4ddb4f6641291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterScript: {fileID: 1797832524}
 --- !u!1 &1723169551
 GameObject:
   m_ObjectHideFlags: 0
@@ -46991,7 +47033,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 3.4932e-41, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.8492e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -52005,6 +52047,7 @@ GameObject:
   - component: {fileID: 1000010689074511}
   - component: {fileID: 1000010689074508}
   - component: {fileID: 1000010689074510}
+  - component: {fileID: 1000010689074512}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -52071,6 +52114,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1000010689074512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010689074507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016abf64e0a892b4cad4ddb4f6641291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterScript: {fileID: 1797832524}
 --- !u!1 &1000013409250083
 GameObject:
   m_ObjectHideFlags: 0

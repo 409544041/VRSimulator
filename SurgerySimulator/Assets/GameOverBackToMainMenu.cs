@@ -3,21 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Back to Lobby
+
 public class GameOverBackToMainMenu : MonoBehaviour
 {
-    [SerializeField] private string MainLobby;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    [SerializeField] private string MainLobby;    
 
     void OnTriggerEnter(Collider col)
     {
