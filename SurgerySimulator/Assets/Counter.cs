@@ -36,8 +36,8 @@ public class Counter : MonoBehaviour
 
         lastX = damageTaken;
 
-        
 
+        
         GameObject.Find("CutHeartOutText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("ReplaceHeartsText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("StichNewHearText").transform.localScale = new Vector3(0, 0, 0);
@@ -62,20 +62,20 @@ public class Counter : MonoBehaviour
         GameObject.Find("ChestCubeRight").transform.localPosition = new Vector3(0, 0, 0);
 
         GameObject.Find("Blood1").transform.GetComponent<Animator>().enabled = false;
-        GameObject.Find("Blood2").transform.GetComponent<Animator>().enabled = false;
         GameObject.Find("Blood1").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("Blood2").transform.GetComponent<Animator>().enabled = false;        
         GameObject.Find("Blood2").transform.localScale = new Vector3(0, 0, 0); 
         GameObject.Find("Blood3").transform.GetComponent<Animator>().enabled = false;       
         GameObject.Find("Blood3").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("Blood4").transform.GetComponent<Animator>().enabled = false;
         GameObject.Find("Blood4").transform.localScale = new Vector3(0, 0, 0);
-
         GameObject.Find("Blood5").transform.GetComponent<Animator>().enabled = false;
         GameObject.Find("Blood5").transform.localScale = new Vector3(0, 0, 0);
-
         GameObject.Find("Blood6").transform.GetComponent<Animator>().enabled = false;
         GameObject.Find("Blood6").transform.localScale = new Vector3(0, 0, 0);
 
+
+        GameObject.Find("Patient").transform.GetComponent<Animator>().enabled = false;
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -85,12 +85,15 @@ public class Counter : MonoBehaviour
         GameObject.Find("MainMenu").transform.localPosition = new Vector3(0, 0, 0);        
 
         GameObject.Find("GameCompleted").transform.localScale = new Vector3(0, 0, 0);
-        GameObject.Find("MainMenuSuccesful").transform.localPosition = new Vector3(0, 0, 0);
+        GameObject.Find("MainMenuSuccesful").transform.localPosition = new Vector3(0, 0, 0);        
         GameObject.Find("ResetLevelSuccesful").transform.localPosition = new Vector3(0, 0, 0);
         GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("SeizureText").transform.localScale = new Vector3(0, 0, 0);
 
-        
+        GameObject.Find("AdrenalineSphere").transform.localPosition = new Vector3(0, 0, 0);
+
+
 
 
 
@@ -171,7 +174,7 @@ public class Counter : MonoBehaviour
     {
         if (stichescounter == 5)
         {
-            
+                       
             GameObject.Find("StichNewHearText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("PutBackChestText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
 
@@ -201,8 +204,8 @@ public class Counter : MonoBehaviour
             textField.text = "Completed";
         }
     }
-    
 
+   
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
