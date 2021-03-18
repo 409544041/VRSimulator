@@ -41,7 +41,7 @@ public class TimerControllerKidney : MonoBehaviour
         //text.time is what is displayed
         textField.text = textTime;        
 
-        if (minutes >= 0 && seconds >= 25) //start seizure 
+        if (minutes >= 1 && seconds >= 15) //start seizure 
         {
             if(var == 0)
             {
@@ -54,7 +54,7 @@ public class TimerControllerKidney : MonoBehaviour
             var += 1; // to make sure seizure happens once
         }        
 
-        if (minutes >= 0 && seconds >= 35) // check if adrenaline given to stop seizure
+        if (minutes >= 1 && seconds >= 35) // check if adrenaline given to stop seizure
         {
             if (randomCheck == 0)//if syringe not used than gameover
             {
@@ -74,7 +74,7 @@ public class TimerControllerKidney : MonoBehaviour
             }
         }
 
-        if(minutes >= 0 && seconds >= 50)//time up with no extra time
+        if(minutes >= 3)//time up with no extra time
         {            
             if(extraTime == 0)//if kidney wasnt throw into the bin then there is no extra time so the game ends after 3mins
             {
@@ -83,7 +83,7 @@ public class TimerControllerKidney : MonoBehaviour
             }            
         }
 
-        if (minutes >= 0 && seconds >= 55)//time up with extra time +20s
+        if (minutes >= 3 && seconds >= 20)//time up with extra time +20s
         {
             if (extraTime == 1 ) //kidney was thrown into the bin so the game ends with extra 20 seconds
             {
@@ -122,14 +122,12 @@ public class TimerControllerKidney : MonoBehaviour
         GameObject.Find("MainMenu").transform.localPosition = new Vector3(00.775f, 1.53f, -3.0937f);
 
         GameObject.Find("ThrowKidneyText").transform.localScale = new Vector3(0, 0, 0);
-        //GameObject.Find("Heart2").transform.GetComponent<Animator>().enabled = false;
 
         //to prevent continuation of the level
         GameObject.Find("ChestCubeRight").transform.localPosition = new Vector3(0, 0, 0);
         GameObject.Find("ChestCubeLeft").transform.localPosition = new Vector3(0, 0, 0);
         GameObject.Find("KidneyRightNew").transform.localPosition = new Vector3(0, 0, 0);
         GameObject.Find("ExtraTimeCube").transform.localPosition = new Vector3(0, 0, 0);
-        //GameObject.Find("KidneyRightNew").transform.localPosition = new Vector3(0, 0, 0);
         GameObject.Find("CutoutArea").transform.localPosition = new Vector3(0, 0, 0);
 
         //Audio

@@ -10,7 +10,6 @@ public class KidneyGravity : MonoBehaviour
     {
         if (col.gameObject.tag == "Hands")
         {
-            //GameObject.Find("HeartWithXR").transform.GetComponent<Animator>().enabled = false;
             GameObject.Find("KidneyRightWithXR").GetComponent<Rigidbody>().isKinematic = false;
             GameObject.Find("ThrowKidneyText").transform.localScale = new Vector3(0.003415799f, 0.004757092f, 0.0084107f);
         }

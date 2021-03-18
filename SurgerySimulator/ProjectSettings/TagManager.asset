@@ -34,6 +34,12 @@ TagManager:
   - KidneyTrigger
   - KidneyWithXR
   - Guts
+  - CutLiverVeins
+  - StitchUpAreaLiver
+  - LiverCube
+  - LiverHPWithXR
+  - LiverTrigger
+  - Stomach
   layers:
   - Default
   - TransparentFX

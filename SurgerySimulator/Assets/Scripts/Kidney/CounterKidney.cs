@@ -68,7 +68,6 @@ public class CounterKidney : MonoBehaviour
         GameObject.Find("CutKidneyVeins").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("StitchUpAreaKidney").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("GutsHP").transform.localPosition = new Vector3(0, 0, 0);
-        //GameObject.Find("HeartWithXR").transform.localPosition = new Vector3(0, 0, 0);
         GameObject.Find("KidneyRight2").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("KidneyRightNew").transform.GetComponent<KidneySpawn>().enabled = false; //to only allow the cube spawner work after the veins are cut
         GameObject.Find("KidneyRightWithXR").transform.localPosition = new Vector3(0, 0, 0);
@@ -146,7 +145,6 @@ public class CounterKidney : MonoBehaviour
             GameObject.Find("LeftPeck").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("LeftPeckWithXR").transform.localScale = new Vector3(0.001000001f, 0.0011363f, 0.001f);
             GameObject.FindWithTag("CutOutChest").active = false;
-            //GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = true; 
             GameObject.Find("CutKidneyVeins").transform.localScale = new Vector3(1, 1, 1); // show where to cut kidney veins
             GameObject.Find("CutOutChestTooDeep").active = false; //once the chest is cut the the too deep area will disappear       
 
@@ -166,10 +164,6 @@ public class CounterKidney : MonoBehaviour
 
             GameObject.Find("ReplaceKidneysText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
             GameObject.FindWithTag("CutKidneyVeins").active = false;
-            //GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = false;            
-            //GameObject.Find("Heart").transform.localScale = new Vector3(0, 0, 0);
-            //GameObject.Find("HeartWithXR").transform.localPosition = new Vector3(-1.472001f, 3.51f, 2.1214f);
-            //GameObject.Find("HeartWithXR").transform.GetComponent<Animator>().enabled = true; //this needed otherwise it wouldnt spawn
             GameObject.Find("KidneyRightNew").transform.GetComponent<KidneySpawn>().enabled = true;
             kidneycutter = 0;
         }
@@ -255,7 +249,6 @@ public class CounterKidney : MonoBehaviour
             GameObject.Find("PutBackChestText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("HeartRate").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = false;
-            //GameObject.Find("Heart2").transform.GetComponent<Animator>().enabled = false;
             GameObject.Find("AudioSource").GetComponent<AudioSource>().mute = true;
             GameObject.Find("PanicAudio").GetComponent<AudioSource>().mute = true;
             GameObject.Find("PanicAudio2").GetComponent<AudioSource>().mute = true;
