@@ -41,7 +41,7 @@ public class TimerControllerKidney : MonoBehaviour
         //text.time is what is displayed
         textField.text = textTime;        
 
-        if (minutes >= 0 && seconds >= 5) //start seizure 
+        if (minutes >= 0 && seconds >= 25) //start seizure 
         {
             if(var == 0)
             {
@@ -54,7 +54,7 @@ public class TimerControllerKidney : MonoBehaviour
             var += 1; // to make sure seizure happens once
         }        
 
-        if (minutes >= 0 && seconds >= 10) // check if adrenaline given to stop seizure
+        if (minutes >= 0 && seconds >= 35) // check if adrenaline given to stop seizure
         {
             if (randomCheck == 0)//if syringe not used than gameover
             {
@@ -74,7 +74,7 @@ public class TimerControllerKidney : MonoBehaviour
             }
         }
 
-        if(minutes >= 0 && seconds >= 15)//time up with no extra time
+        if(minutes >= 0 && seconds >= 50)//time up with no extra time
         {            
             if(extraTime == 0)//if kidney wasnt throw into the bin then there is no extra time so the game ends after 3mins
             {
@@ -83,7 +83,7 @@ public class TimerControllerKidney : MonoBehaviour
             }            
         }
 
-        if (minutes >= 0 && seconds >= 25)//time up with extra time +20s
+        if (minutes >= 0 && seconds >= 55)//time up with extra time +20s
         {
             if (extraTime == 1 ) //kidney was thrown into the bin so the game ends with extra 20 seconds
             {
@@ -111,7 +111,7 @@ public class TimerControllerKidney : MonoBehaviour
         GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("StartGameText").transform.localScale = new Vector3(0, 0, 0);
-        GameObject.Find("CutKidneyOutText").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("RemoveChestPlatesAndGutsText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("ReplaceKidneysText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("StichNewKidneyText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("PutBackChestText").transform.localScale = new Vector3(0, 0, 0);

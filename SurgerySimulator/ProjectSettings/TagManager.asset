@@ -33,6 +33,7 @@ TagManager:
   - StitchUpAreaKidney
   - KidneyTrigger
   - KidneyWithXR
+  - Guts
   layers:
   - Default
   - TransparentFX

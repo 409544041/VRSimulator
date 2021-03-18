@@ -15,6 +15,7 @@ public class CounterKidney : MonoBehaviour
     public int leftpeck = 0;
     public int rightpeck = 0;
     public int damageTaken = 0;
+    public int gutscounter = 0;
 
     //used for damage calculations and healthbar
     public int lastX = 0; 
@@ -30,7 +31,7 @@ public class CounterKidney : MonoBehaviour
         lastX = damageTaken;
         
         //All the Texts on start are made invisible
-        GameObject.Find("CutKidneyOutText").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("RemoveChestPlatesAndGutsText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("ReplaceKidneysText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("StichNewKidneyText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("PutBackChestText").transform.localScale = new Vector3(0, 0, 0);
@@ -43,6 +44,7 @@ public class CounterKidney : MonoBehaviour
         GameObject.Find("ThrowKidneyText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("ExtraTimeText").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("GameOverText").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("PutGutsBackInText").transform.localScale = new Vector3(0, 0, 0);
 
         //Select buttons made invisible
         GameObject.Find("ResetLevel").transform.localPosition = new Vector3(0, 0, 0);
@@ -58,10 +60,14 @@ public class CounterKidney : MonoBehaviour
         GameObject.Find("ChestCubeLeft").transform.localPosition = new Vector3(0, 0, 0);
         GameObject.Find("ChestCubeRight").transform.localPosition = new Vector3(0, 0, 0);
 
+        //Guts
+        GameObject.Find("GutsCube").transform.localPosition = new Vector3(0, 0, 0);
+        GameObject.Find("GutsHP2").transform.localScale = new Vector3(0, 0, 0);
+
         //Kidney
         GameObject.Find("CutKidneyVeins").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("StitchUpAreaKidney").transform.localScale = new Vector3(0, 0, 0);
-        GameObject.Find("GutsHP").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("GutsHP").transform.localPosition = new Vector3(0, 0, 0);
         //GameObject.Find("HeartWithXR").transform.localPosition = new Vector3(0, 0, 0);
         GameObject.Find("KidneyRight2").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("KidneyRightNew").transform.GetComponent<KidneySpawn>().enabled = false; //to only allow the cube spawner work after the veins are cut
@@ -107,6 +113,7 @@ public class CounterKidney : MonoBehaviour
         CutChestOut();
         CutKidneyOut();
         StitchKidney();
+        Guts();
         Chest();
 
         //Calculate Damage
@@ -126,7 +133,7 @@ public class CounterKidney : MonoBehaviour
         if (chestcutter == 5) //when all the pieces are triggered 53
         {
             GameObject.Find("StartGameText").transform.localScale = new Vector3(0, 0, 0);
-            GameObject.Find("CutKidneyOutText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            GameObject.Find("RemoveChestPlatesAndGutsText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
 
             GameObject.Find("GutsHP").transform.localScale = new Vector3(0.4372422f, 0.4063207f, 0.4828697f);
 
@@ -141,7 +148,9 @@ public class CounterKidney : MonoBehaviour
             GameObject.FindWithTag("CutOutChest").active = false;
             //GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = true; 
             GameObject.Find("CutKidneyVeins").transform.localScale = new Vector3(1, 1, 1); // show where to cut kidney veins
-            GameObject.Find("CutOutChestTooDeep").active = false; //once the chest is cut the the too deep area will disappear           
+            GameObject.Find("CutOutChestTooDeep").active = false; //once the chest is cut the the too deep area will disappear       
+
+            GameObject.Find("GutsHP").transform.localPosition = new Vector3(-1.735f, 3.442f, 2.138f);
 
             chestcutter = 0;
         }
@@ -151,10 +160,10 @@ public class CounterKidney : MonoBehaviour
     {
         if (kidneycutter == 2) //when all the pieces are triggered
         {
+            GameObject.Find("RemoveChestPlatesAndGutsText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("KidneyRight").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("KidneyRightWithXR").transform.localPosition = new Vector3(-1.682763f, 3.383473f, 2.0353f);
 
-            GameObject.Find("CutKidneyOutText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("ReplaceKidneysText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
             GameObject.FindWithTag("CutKidneyVeins").active = false;
             //GameObject.Find("Heart").transform.GetComponent<Animator>().enabled = false;            
@@ -171,12 +180,25 @@ public class CounterKidney : MonoBehaviour
         if (stichescounter == 5)//when all the pieces are triggered
         {                       
             GameObject.Find("StichNewKidneyText").transform.localScale = new Vector3(0, 0, 0);
-            GameObject.Find("PutBackChestText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            GameObject.Find("PutGutsBackInText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
             GameObject.FindWithTag("StitchUpAreaKidney").active = false;
-            GameObject.Find("ChestCubeLeft").transform.localPosition = new Vector3(0.5217f, 1.2367f, -2.985f);
-            GameObject.Find("ChestCubeRight").transform.localPosition = new Vector3(0.5217f, 1.2367f, -3.1456f);
+            GameObject.Find("GutsCube").transform.localPosition = new Vector3(0.3411f, 1.155f, -3.0671f);
             stichescounter = 0;
         }
+    }
+
+    void Guts()
+    {
+        if(gutscounter == 1)
+        {
+            GameObject.Find("PutGutsBackInText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("GutsCube").transform.localPosition = new Vector3(0, 0, 0);
+            GameObject.Find("PutBackChestText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            GameObject.Find("ChestCubeLeft").transform.localPosition = new Vector3(0.52116f, 1.23325f, -2.985f);
+            GameObject.Find("ChestCubeRight").transform.localPosition = new Vector3(0.52157f, 1.23243f, -3.1456f);
+
+            gutscounter = 0;
+        }  
     }
 
     void Chest()
@@ -190,6 +212,7 @@ public class CounterKidney : MonoBehaviour
             GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("ExtraTimeText").transform.localScale = new Vector3(0, 0, 0);
+
             //write well done and stop time
             GameObject.Find("Timer").transform.GetComponent<TimerControllerKidney>().enabled = false; //this needed otherwise it wouldnt spawn
             textField.fontSize = 20;
@@ -226,7 +249,7 @@ public class CounterKidney : MonoBehaviour
             GameObject.Find("LowHealthText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("VeryLowHealthText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("StartGameText").transform.localScale = new Vector3(0, 0, 0);
-            GameObject.Find("CutKidneyOutText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("RemoveChestPlatesAndGutsText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("ReplaceKidneysText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("StichNewKidneyText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("PutBackChestText").transform.localScale = new Vector3(0, 0, 0);
