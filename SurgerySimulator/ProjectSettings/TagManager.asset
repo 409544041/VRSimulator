@@ -28,6 +28,7 @@ TagManager:
   - HeartWithXR
   - Hammer
   - Screwdriver
+  - KidneyCube
   layers:
   - Default
   - TransparentFX
