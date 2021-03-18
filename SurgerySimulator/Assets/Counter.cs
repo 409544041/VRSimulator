@@ -77,6 +77,14 @@ public class Counter : MonoBehaviour
         GameObject.Find("Blood5").transform.localScale = new Vector3(0, 0, 0);
         GameObject.Find("Blood6").transform.GetComponent<Animator>().enabled = false;
         GameObject.Find("Blood6").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("Blood7").transform.GetComponent<Animator>().enabled = false;
+        GameObject.Find("Blood7").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("Blood8").transform.GetComponent<Animator>().enabled = false;
+        GameObject.Find("Blood8").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("Blood9").transform.GetComponent<Animator>().enabled = false;
+        GameObject.Find("Blood9").transform.localScale = new Vector3(0, 0, 0);
+        GameObject.Find("Blood10").transform.GetComponent<Animator>().enabled = false;
+        GameObject.Find("Blood10").transform.localScale = new Vector3(0, 0, 0);
 
         //Other Animations
         GameObject.Find("SyringeAnimation").transform.GetComponent<Animator>().enabled = false;

@@ -26,6 +26,8 @@ TagManager:
   - Picker
   - Syringe
   - HeartWithXR
+  - Hammer
+  - Screwdriver
   layers:
   - Default
   - TransparentFX
