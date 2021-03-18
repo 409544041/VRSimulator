@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//when the new heart from the cooler is placed back in it respawn in the correct position
+//when the new kidney from the cooler is placed back in it respawn in the correct position
 
 public class KidneySocketController : MonoBehaviour
 {
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "HeartTrigger")
+        if (col.gameObject.tag == "KidneyTrigger")
         {
-            GameObject.Find("ReplaceHeartsText").transform.localScale = new Vector3(0, 0, 0);
-            GameObject.Find("StichNewHearText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-            GameObject.Find("HeartNew").transform.localScale = new Vector3(0, 0, 0);
-            GameObject.Find("Heart2").transform.localScale = new Vector3(0.4000004f, 0.4000004f, 0.4000004f);
-            GameObject.Find("Heart2").transform.GetComponent<Animator>().enabled = true;
-            GameObject.Find("StitchUpAreaHeart").transform.localScale = new Vector3(1, 1, 1); // stitches appear after heart was placed in
+            GameObject.Find("ReplaceKidneysText").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("StichNewKidneyText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            GameObject.Find("KidneyRightNew").transform.localScale = new Vector3(0, 0, 0);
+            GameObject.Find("KidneyRight2").transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+            GameObject.Find("StitchUpAreaKidney").transform.localScale = new Vector3(1, 1, 1); // stitches appear after kidney was placed in
         }
     }    
 }

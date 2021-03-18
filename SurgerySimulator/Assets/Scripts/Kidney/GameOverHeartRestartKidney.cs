@@ -7,13 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class GameOverHeartRestartKidney : MonoBehaviour
 {
-    [SerializeField] private string HeartSurgery;
+    [SerializeField] private string KidneySurgery;
     
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Picker")
         {
-            SceneManager.LoadScene(HeartSurgery);
+            SceneManager.LoadScene(KidneySurgery);
         }
     }
 

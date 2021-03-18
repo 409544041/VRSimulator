@@ -29,6 +29,10 @@ TagManager:
   - Hammer
   - Screwdriver
   - KidneyCube
+  - CutKidneyVeins
+  - StitchUpAreaKidney
+  - KidneyTrigger
+  - KidneyWithXR
   layers:
   - Default
   - TransparentFX

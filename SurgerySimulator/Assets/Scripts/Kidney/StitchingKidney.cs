@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//trigger to stitch the heart back in
+//trigger to stitch the kidney back in
 
 public class StitchingKidney : MonoBehaviour
 {
