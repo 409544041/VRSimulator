@@ -129,7 +129,7 @@ public class CounterKidney : MonoBehaviour
 
     void CutChestOut()
     {
-        if (chestcutter == 5) //when all the pieces are triggered 53
+        if (chestcutter == 53) //when all the pieces are triggered 53
         {
             GameObject.Find("StartGameText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("RemoveChestPlatesAndGutsText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
@@ -156,7 +156,7 @@ public class CounterKidney : MonoBehaviour
 
     void CutKidneyOut()
     {
-        if (kidneycutter == 2) //when all the pieces are triggered
+        if (kidneycutter == 6) //when all the pieces are triggered
         {
             GameObject.Find("RemoveChestPlatesAndGutsText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("KidneyRight").transform.localScale = new Vector3(0, 0, 0);
@@ -171,7 +171,7 @@ public class CounterKidney : MonoBehaviour
 
     void StitchKidney()
     {
-        if (stichescounter == 5)//when all the pieces are triggered
+        if (stichescounter == 6)//when all the pieces are triggered
         {                       
             GameObject.Find("StichNewKidneyText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("PutGutsBackInText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);

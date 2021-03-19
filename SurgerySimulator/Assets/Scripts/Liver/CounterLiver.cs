@@ -128,7 +128,7 @@ public class CounterLiver : MonoBehaviour
 
     void CutChestOut()
     {
-        if (chestcutter == 5) //when all the pieces are triggered
+        if (chestcutter == 53) //when all the pieces are triggered
         {
             GameObject.Find("StartGameText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("CutLiverOutText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
@@ -152,7 +152,7 @@ public class CounterLiver : MonoBehaviour
 
     void CutLiverOut()
     {
-        if (kidneycutter == 5) //when all the pieces are triggered
+        if (kidneycutter == 6) //when all the pieces are triggered
         {
             GameObject.Find("CutLiverOutText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("ReplaceLiverText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
@@ -166,7 +166,7 @@ public class CounterLiver : MonoBehaviour
 
     void StitchLiver()
     {
-        if (stichescounter == 5)//when all the pieces are triggered
+        if (stichescounter == 6)//when all the pieces are triggered
         {                       
             GameObject.Find("StichNewLiverText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("PutStomachBackText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
