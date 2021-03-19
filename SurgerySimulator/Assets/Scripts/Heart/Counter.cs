@@ -120,7 +120,7 @@ public class Counter : MonoBehaviour
 
     void CutChestOut()
     {
-        if (chestcutter == 53) //when all the pieces are triggered
+        if (chestcutter == 5) //when all the pieces are triggered
         {
             GameObject.Find("StartGameText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("CutHeartOutText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
@@ -144,7 +144,7 @@ public class Counter : MonoBehaviour
 
     void CutHeartOut()
     {
-        if (heartcutter == 12) //when all the pieces are triggered
+        if (heartcutter == 5) //when all the pieces are triggered
         {
             GameObject.Find("CutHeartOutText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("ReplaceHeartsText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
@@ -160,7 +160,7 @@ public class Counter : MonoBehaviour
 
     void StitchHeart()
     {
-        if (stichescounter == 12)//when all the pieces are triggered
+        if (stichescounter == 5)//when all the pieces are triggered
         {                       
             GameObject.Find("StichNewHearText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("PutBackChestText").transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);

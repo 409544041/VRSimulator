@@ -183,7 +183,7 @@ public class CounterKidney : MonoBehaviour
 
     void Guts()
     {
-        if(gutscounter == 1)
+        if(gutscounter == 1 || gutscounter == 2)
         {
             GameObject.Find("PutGutsBackInText").transform.localScale = new Vector3(0, 0, 0);
             GameObject.Find("GutsCube").transform.localPosition = new Vector3(0, 0, 0);
