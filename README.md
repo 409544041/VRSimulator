@@ -1,8 +1,7 @@
 # VRSimulator
 
-hey whats up
-18
-fd
-fd
-fd
-fd
+Virtual Surgery Simulator
+by Arkadiusz Rybicki
+C17337523
+DT282
+05/04/2021
